@@ -38,6 +38,8 @@ USER appuser
 
 ENV ROCKET_SIZE=Medium
 
+ENV SECRET=Secret
+
 HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \
     CMD curl -f http://localhost:8000/health || exit 1
 
